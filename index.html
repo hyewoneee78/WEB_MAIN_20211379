@@ -2,11 +2,95 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <title>LOL 메인화면</title>
+    <meta name="author" content="20211379" />
+    <meta name="keywords" content="computer" />
+    <base href="http://127.0.0.1:5500" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      table {
+        font-size: 20pt;
+        color: white;
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <title>SSG랜더스 메인화면</title>
   </head>
-  <body style="background-color: black">
-    <div style="display: flex; justify-content: center">
-      <img src="image/logo.PNG" width="200" height="60" />
+  <body style="background-color: red">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <nav class="navbar bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img
+                src="image/logo_Landers.png"
+                alt="Logo"
+                width="200"
+                height="60"
+                class="d-inline-block align-text-top"
+              />
+            </a>
+          </div>
+        </nav>
+        <a class="navbar-brand" href="#">홈페이지 테스트</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >메인페이지</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">구단정보</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">코칭스태프</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                선수정보
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">투수</a></li>
+                <li><a class="dropdown-item" href="#">포수</a></li>
+                <li><a class="dropdown-item" href="#">외야수</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">내야수</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--<div style="display: flex; justify-content: center">
+      <img src="image/logo_Landers.png" width="200" height="60" />
       <h3
         style="
           font-size: 24px;
@@ -15,12 +99,54 @@
           color: white;
         "
       >
-        게임정보 기본정보 챔피언 패치 노트 새소식 다운로드
+        구단정보 코칭스태프 선수정보 멤버십 경기결과 공지 랜더스톡
       </h3>
-    </div>
+    </div> -->
+    <hr />
     <div style="display: flex; justify-content: center">
-      <img src="image/Main.jpg" width="1200" height="768" />
+      <img src="image/Main_Landers.jpg" width="1200" height="768" />
     </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">1</th>
+          <th scope="col">2</th>
+          <th scope="col">3</th>
+          <th scope="col">4</th>
+          <th scope="col">5</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">투수</th>
+          <td>김광현</td>
+          <td>오원석</td>
+          <td>박종훈</td>
+          <td>문승원</td>
+          <td>서진용</td>
+        </tr>
+        <tr>
+          <th scope="row">공백</th>
+          <td colspan="5">
+            <a href="https://www.ssglanders.com/main" target="_blank"
+              >ssg랜더스 웹사이트 접속하기</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">야수</th>
+          <td>최정</td>
+          <td>박성한</td>
+          <td>최지훈</td>
+          <td colspan="2">
+            <font size="13"
+              ><img src="image/Q.jpg" width="50" height="50" />공란, 공란</font
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
     <hr />
     <div style="display: flex; justify-content: center">
       <h3
@@ -32,7 +158,7 @@
           font-family: '굴림';
         "
       >
-        라이엇 게임 회사 정보 2024년 3월 작성됨
+        SSG랜더스 구단 정보 2024년 3월 작성됨
       </h3>
     </div>
   </body>
