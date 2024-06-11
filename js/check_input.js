@@ -1,6 +1,16 @@
+const check_xss = (input) => {
+  const DOMPurify = window.DOMPurify;
+  const sanitizedInput = DOMPurify.sanitize(input);
+  if (sanitizedInput !== input) {
+    // XSS 공격 가능성 발견 시 에러 처리
+    alert("XSS 공격 가능성이 있는 입력값을 발견했습니다.");
+    return false;
+  }
+  return sanitizedInput;
+};
+
 const check_input = () => {
-  const loginForm = document.getElementById("login_form");
-  const loginBtn = document.getElementById("login_btn");
+  const idsave_check = document.getElementById("idSaveCheck");
   const emailInput = document.getElementById("typeEmailX");
   const passwordInput = document.getElementById("typePasswordX");
   const c = "아이디, 패스워드를 체크합니다";
@@ -18,5 +28,12 @@ const check_input = () => {
   }
   if (!sanitizedPassword) {
     return false;
+  }
+  if (idsave_check.checked == true) {
+    alert("쿠키를 저장합니다.", emailValue);
+    setCookie("id", emailValue, 1);
+    alert("쿠키 값 :" + emailValue);
+  } else {
+    setCookie("id", emailValue.value, 0);
   }
 };
